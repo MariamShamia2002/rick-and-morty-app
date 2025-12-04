@@ -1,8 +1,9 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
-    min-height: 100vh;
+    padding: 2rem 3rem;
+    min-height: calc(100vh - 200px);
+    flex: 1;
 }
 
 .backButton {
@@ -11,21 +12,21 @@
     gap: 0.5rem;
     margin-bottom: 2rem;
     padding: 0.75rem 1.5rem;
-    background: #fff;
-    color: #2d3748;
+    background: var(--card-bg);
+    color: var(--text-primary);
     text-decoration: none;
     border-radius: 8px;
     cursor: pointer;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
 }
 
 .backButton:hover {
-    background: #f7fafc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--bg-color);
+    box-shadow: var(--shadow-md);
 }
 
 .header {
@@ -33,10 +34,11 @@
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     margin-bottom: 3rem;
-    background: #fff;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -64,9 +66,10 @@
 .name {
     margin: 0 0 1.5rem 0;
     font-size: clamp(2rem, 4vw, 2.5rem);
-    color: #2d3748;
+    color: var(--text-primary);
     font-weight: 700;
     line-height: 1.2;
+    transition: color 0.3s ease;
 }
 
 .status {
@@ -128,7 +131,9 @@
     display: flex;
     padding: 0.75rem 0;
     font-size: 1rem;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .details li:last-child {
@@ -137,18 +142,53 @@
 
 .label {
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text-primary);
     margin-right: 0.75rem;
     min-width: 100px;
+    transition: color 0.3s ease;
 }
 
 .sectionTitle {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
-    color: #2d3748;
+    color: var(--text-primary);
     font-weight: 700;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.seasonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.seasonSection {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease;
+}
+
+.seasonTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.noEpisodes {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
 }
 
 .loading,
@@ -156,15 +196,15 @@
     text-align: center;
     margin-top: 3rem;
     font-size: 1.25rem;
-    color: #718096;
+    color: var(--text-secondary);
     padding: 3rem;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .error {
-    background: #fee;
     color: #c53030;
     border: 1px solid #feb2b2;
 }

@@ -14,22 +14,22 @@
 }
 
 .item {
-    background: #fff;
+    background: var(--bg-color);
     padding: 1.25rem;
     border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
 }
 
 .item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
     transform: translateY(-2px);
 }
 
 .episodeCode {
     font-weight: 700;
-    color: #3498db;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     display: inline-block;
     font-size: 0.9rem;
@@ -39,11 +39,13 @@
     margin: 0 0 0.5rem 0;
     font-size: 1rem;
     font-weight: 600;
-    color: #2d3748;
+    color: var(--text-primary);
     line-height: 1.4;
+    transition: color 0.3s ease;
 }
 
 .date {
     font-size: 0.875rem;
-    color: #718096;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
 }

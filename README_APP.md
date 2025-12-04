@@ -180,4 +180,4 @@ Created as part of a React + TypeScript bootcamp technical assessment.
 
 ---
 
-Built with ❤️ using React, TypeScript, and TanStack Query
+Built using React, TypeScript, and TanStack Query
