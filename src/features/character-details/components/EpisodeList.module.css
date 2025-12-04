@@ -1,0 +1,49 @@
+.list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.item {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.episodeCode {
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.name {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    line-height: 1.4;
+}
+
+.date {
+    font-size: 0.875rem;
+    color: #718096;
+}

@@ -1,0 +1,94 @@
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+.image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  padding: 1.25rem;
+}
+
+.name {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.3;
+}
+
+.info {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.card[data-status="Alive"] .status {
+  background: #d4edda;
+  color: #155724;
+}
+
+.card[data-status="Alive"] .status::before {
+  background: #28a745;
+}
+
+.card[data-status="Dead"] .status {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.card[data-status="Dead"] .status::before {
+  background: #dc3545;
+}
+
+.card[data-status="unknown"] .status {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.card[data-status="unknown"] .status::before {
+  background: #a0aec0;
+}
